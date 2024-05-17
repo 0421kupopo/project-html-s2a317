@@ -1,0 +1,41 @@
+<!--作成日:2024/05/16-->
+<!--作成者:菅原季空-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>transitionを使ったアニメーション</title>
+  <style type="text/css">
+    /*共通設定*/
+    div{
+      width: 100px;
+      height: 100px;
+      padding: 1rem;
+      margin: 2rem 2rem 4rem;
+      background: #ad4444;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /*右に伸びる*/
+    .width {transition: widthv0.5s ease-out;}
+    .width:hover{width: 400px}
+
+    /*四角から丸へ*/
+    .circle{transition: border-radius 0.2s;}
+    .circle:hover{border-radius: 50%;}
+
+    /*ホバーして１秒後にズームアップ*/
+    .scale{transition: transform 0.5s ease-in-out 1s;}
+    .scale:hover{transform: scale(1.5);}
+  </style>
+  </head>
+  <body>
+    <h3>ホバーアニメーション</h3>
+    <p>下の３つの要素をホバーしてみよう</p>
+    <div class="width">右の伸びる</div>
+    <div class="circle">四角から丸へ</div>
+    <div class="scale">ホバーして１秒後にズームアップ</div>
+  </body>
+</html>
